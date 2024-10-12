@@ -1,0 +1,74 @@
+100 Days Of Coding Challenge!
+
+Day-76 Task
+Read and understand the following Visual Guide about DNS and DHCP.
+
+What is DNS? https://roadmap.sh/guides/dns-in-one-picture
+
+What is DHCP? https://roadmap.sh/guides/dhcp-in-one-picture
+
+//------------------------------------------------------------------
+
+DNS (Domain Name System)
+DNS, or Domain Name System, functions as the internet's phonebook,
+translating human-readable domain names like www.example.com into machine-readable IP addresses such as 192.0.2.1.
+This conversion is essential because computers rely on IP addresses to identify and communicate with each other across the internet,
+while people prefer using easily memorable names.
+
+How DNS Works:
+ 1. User Request: When a user enters a domain name like example.com in their browser,
+ the request is sent to the DNS resolver (usually provided by the user's ISP or local network).
+
+ 2. DNS Resolver: The resolver queries different DNS servers to resolve the domain name to an IP address.
+
+ 3. Root Server: The resolver first contacts a root DNS server,
+
+ which directs it to the appropriate top-level domain (TLD) server based on the domain extension (e.g., .com, .org).
+
+ 4. TLD Server: The TLD server refers the resolver to the authoritative DNS server responsible for the specific domain (e.g., example.com).
+
+ 5. Authoritative DNS Server: This server provides the final IP address for the domain.
+
+ 6. Response: The DNS resolver sends the IP address back to the browser, allowing it to connect to the web server hosting the site.
+
+Example:
+When you visit www.google.com, the DNS translates the domain name into its IP address (e.g., 172.217.11.174).
+This IP address is then used by your browser to access the Google server and load the website.
+
+DNS Hierarchy:
+DNS operates in a hierarchical structure:
+
+ * Root Servers: Direct traffic to the appropriate TLD servers.
+ * TLD Servers: Handle domain extensions like .com, .org, and direct traffic to authoritative servers.
+ * Authoritative Servers: Provide the IP addresses for specific domains.
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DHCP (Dynamic Host Configuration Protocol)
+DHCP, or Dynamic Host Configuration Protocol, is a network protocol used to automatically assign IP addresses and other communication parameters to devices on a network.
+This process simplifies device configuration, allowing devices to connect and communicate with minimal manual intervention.
+
+How DHCP Works:
+ 1. DHCP Discover: When a device (like a computer or smartphone) connects to a network, it broadcasts a DHCP Discover message, requesting an IP address.
+
+ 2. DHCP Offer: A DHCP server (usually the router) responds with an available IP address and other network configuration details,
+ such as subnet mask, gateway, and DNS server addresses.
+
+ 3. DHCP Request: The device accepts the offer by sending a DHCP Request message.
+
+ 4. DHCP Acknowledgment: The server confirms the assignment with a DHCP Acknowledgment message, and the device can now use the assigned IP address to communicate on the network.
+
+Example:
+When you connect your laptop to a Wi-Fi network, DHCP automatically assigns an IP address (e.g., 192.168.1.100) to your device.
+Without DHCP, you'd have to manually assign an IP address and configure network settings.
+
+DHCP Lease:
+The IP address assigned to a device is temporary and referred to as a "lease." Once the lease expires,
+the device must either renew it or request a new IP address from the DHCP server.
+
+Conclusion
+Both DNS and DHCP play critical roles in making modern networks efficient:
+
+ * DNS ensures that users can access websites using simple domain names instead of complex IP addresses.
+ * DHCP automates the configuration of devices on a network, enabling them to communicate with each other effortlessly without manual setup.
+ Together, they allow seamless network and internet access across devices.
